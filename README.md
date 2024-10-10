@@ -19,5 +19,18 @@ python3 src/main.py env.domain=metaworld env.task=mw-hammer env.action_repeat=2 
 ```
 ``` env.domain``` can take ```metaworld``` or ```dmc_suite``` for [MetaWorld](https://meta-world.github.io) and [DeepMind Control Suite](https://github.com/deepmind/dm_control).
 
+For ```dmc_suite``` set ```update_freq: 5``` in ```config.yaml```.
+
 To use [Weights&Biases](https://wandb.ai/site/) for logging, set up ```wandb``` variables inside ```config.yaml```.
+
+# Citation
+cite the paper as follows:
+```
+@article{kotb2024qt,
+  title={QT-TDM: Planning with Transformer Dynamics Model and Autoregressive Q-Learning},
+  author={Kotb, Mostafa and Weber, Cornelius and Hafez, Muhammad Burhan and Wermter, Stefan},
+  journal={arXiv preprint arXiv:2407.18841},
+  year={2024}
+}
+```
 
