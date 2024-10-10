@@ -1,0 +1,69 @@
+
+# Environment
+env:
+  domain:  metaworld
+  task:  mw-hammer
+  modality: state # only use state
+  frame_stack: 1 # only with pixels
+  action_repeat: 2
+  obs_shape: ???
+  action_dim: ???
+  episode_length: ???
+  max_num_episodes: 5000 # buffer size
+  train_steps: 1000000
+  seed: 10
+  discount: 0.98
+  scale: ??? # used in reward scale
+  device: cuda
+
+
+# misc
+misc:
+  seed: ${env.seed}
+  seed_steps: 2000
+  device: cuda
+  eval_episodes: 10 # evaluate with 10 episodes
+  eval_freq: 10000 # evaluate every 10000 env steps
+
+
+
+
+#wandb
+wandb:
+  use_wandb: false # to log with wandb
+  project:   # project name
+  entity:    
+  exp_name: default
+  save_video: false # to record evaluation episodes and log it to wandb
+  save_model: false # to save the model after training
+  seed: ${env.seed}
+
+
+#QTramsformer
+qtransformer:
+  num_bins: 256  # discretized action bins
+  obs_shape: ${env.obs_shape} 
+  tokens_per_block: ${env.action_dim}
+  max_blocks: 1 # max len of sequence
+  max_tokens: ??? # max num of tokens is (tokens_per_block * max_blocks)
+  batch_size:  512
+  attention: causal
+  num_layers: 2 # num of transformer blocks (ie, masked self-attention followed by FFNN) is 10
+  num_heads: 8 # num of attention heads is 4
+  embed_dim: 128  # token embed dim 
+  embed_pdrop: 0.1 # embeddings dropout 0.1
+  resid_pdrop: 0.1 # residual dropout 0.1
+  attn_pdrop: 0.1 # attention dropout 0.1
+  td_loss_coef: 1.0
+  conservative_loss_coef: 0.5
+  conservative_reg_loss_weight: 0.0 # only used during offline RL (we set it to zero as it is online RL)
+  lr:  3e-4 
+  eps: 1e-5 
+  decay: 1e-6
+  grad_clip: 20
+  updtae_freq: 10 # set it to 5 with DMC, frequency to update target model
+  tau: 0.005 # EMA coefficient
+  n_step_td: 3
+  use_MC_return: false # Monte-Carlo return, only with sparse reward tasks
+  discount: ${env.discount} 
+
