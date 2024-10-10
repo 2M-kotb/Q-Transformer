@@ -48,8 +48,8 @@ qtransformer:
   max_tokens: ??? # max num of tokens is (tokens_per_block * max_blocks)
   batch_size:  512
   attention: causal
-  num_layers: 2 # num of transformer blocks (ie, masked self-attention followed by FFNN) is 10
-  num_heads: 8 # num of attention heads is 4
+  num_layers: 2 # num of transformer blocks (ie, masked self-attention followed by FFNN) 
+  num_heads: 8 # num of attention heads
   embed_dim: 128  # token embed dim 
   embed_pdrop: 0.1 # embeddings dropout 0.1
   resid_pdrop: 0.1 # residual dropout 0.1
