@@ -18,7 +18,6 @@ dependencies:
       - dm-control==1.0.8
       - easydict==1.9
       - einops==0.7.0
-      - ema-pytorch==0.4.6
       - ffmpeg==1.4
       - glfw==2.6.4
       - gym==0.21.0
@@ -27,8 +26,6 @@ dependencies:
       - imageio==2.33.1
       - imageio-ffmpeg==0.4.9
       - kornia==0.7.1
-      - matplotlib==3.8.4
-      - matplotlib-inline==0.1.7
       - git+https://github.com/Farama-Foundation/Metaworld.git@04be337a12305e393c0caf0cbf5ec7755c7c8feb
       - moviepy==1.0.3
       - mujoco==2.3.1  
@@ -46,10 +43,6 @@ dependencies:
       - seaborn==0.13.2
       - setuptools==66.1.1
       - submitit==1.5.1
-      - tensorboard==2.17.1
-      - tensorboard-data-server==0.7.2
-      - tensorboardx==2.6.2.2
-      - tensordict-nightly==2024.1.10
       - termcolor==2.4.0
       - torchrl-nightly==2024.3.26  
       - tqdm==4.66.1
