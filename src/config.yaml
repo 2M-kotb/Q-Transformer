@@ -1,7 +1,7 @@
 
 # Environment
 env:
-  domain:  metaworld
+  domain:  metaworld # dmc_suite 
   task:  mw-hammer
   modality: state # only use state
   frame_stack: 1 # only with pixels
