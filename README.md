@@ -23,6 +23,8 @@ python3 src/main.py env.domain=metaworld env.task=mw-hammer env.action_repeat=2 
 
 For ```dmc_suite``` set ```update_freq: 5``` in ```config.yaml```.
 
+For ```sparse reward tasks``` set ```use_MC_return: true``` in ```config.yaml```.
+
 To use [Weights&Biases](https://wandb.ai/site/) for logging, set up ```wandb``` variables inside ```config.yaml```.
 
 # Citation
