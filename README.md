@@ -4,7 +4,7 @@
 This is an adaptive version of [Q-Transformer](https://qtransformer.github.io/) model from Google Deepmind, in which it only works with state-based tasks in an online RL scenario.
 This model is used in the following paper:
 
-[QT-TDM: Planning with Transformer Dynamics Model and Autoregressive Q-Learning](https://arxiv.org/pdf/2407.18841v2)
+[QT-TDM: Planning With Transformer Dynamics Model and Autoregressive Q-Learning](https://arxiv.org/pdf/2407.18841v2)
 
 __Paper GitHub:__ [QT-TDM](https://github.com/2M-kotb/QT-TDM/tree/main)
 
@@ -30,12 +30,15 @@ To use [Weights&Biases](https://wandb.ai/site/) for logging, set up ```wandb``` 
 # Citation
 cite the paper as follows:
 ```
-@article{kotb2024qt,
-  title={QT-TDM: Planning with Transformer Dynamics Model and Autoregressive Q-Learning},
+@ARTICLE{qttdm,
   author={Kotb, Mostafa and Weber, Cornelius and Hafez, Muhammad Burhan and Wermter, Stefan},
-  journal={arXiv preprint arXiv:2407.18841},
-  year={2024}
-}
+  journal={IEEE Robotics and Automation Letters}, 
+  title={QT-TDM: Planning With Transformer Dynamics Model and Autoregressive Q-Learning}, 
+  year={2025},
+  volume={10},
+  number={1},
+  pages={112-119},
+  doi={10.1109/LRA.2024.3504341}}
 ```
 
 # Credits
